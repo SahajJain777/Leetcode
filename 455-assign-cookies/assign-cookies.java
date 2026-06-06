@@ -12,16 +12,17 @@ class Solution {
 
         while (cookie < s.length && kid < g.length) {
 
-            if (g[kid] > s[cookie]) {
-                cookie++;
-            }
             
-            else if(g[kid] <= s[cookie]) {
+            
+            if(g[kid] <= s[cookie]) {
                 count++;
                 kid++;
                 cookie++;
             }
-
+            
+            else if (g[kid] > s[cookie]) {
+                cookie++;
+            }
             
         }
 
