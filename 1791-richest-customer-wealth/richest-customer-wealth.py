@@ -6,6 +6,6 @@ class Solution(object):
             for j in range(len(accounts[0])):
                 sum = sum + accounts[i][j]
             if(maxsum<sum): maxsum = sum
-        
-
         return maxsum
+
+        
