@@ -1,13 +1,12 @@
-class Solution(object):
-    def removeDuplicates(self, nums):
-        if not nums:
-            return 0
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
 
-        k = 1
+        write = 1
 
-        for i in range(1, len(nums)):
-            if nums[i] != nums[k - 1]:
-                nums[k] = nums[i]
-                k += 1
-                
-        return k
+
+        for i in range(1,len(nums)):
+            if nums[i] != nums[i-1]:
+                nums[write] = nums[i]
+                write += 1
+
+        return write 
