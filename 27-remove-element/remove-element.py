@@ -1,13 +1,11 @@
-class Solution(object):
-    def removeElement(self, nums, val):
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        point = 0
 
-        index = 0
-
-        for num in range(len(nums)):
-            if(nums[num]!=val):
-                nums[index] = nums[num]
-                index = index + 1
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[i], nums[point] = nums[point], nums[i]
+                point +=1
+            
         
-        return index
-        
-
+        return point
