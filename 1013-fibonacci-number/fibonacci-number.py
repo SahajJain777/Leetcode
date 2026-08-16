@@ -11,4 +11,4 @@ class Solution(object):
             x = y
             y = c
         
-        return c
+        return y
