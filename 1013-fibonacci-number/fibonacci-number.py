@@ -1,10 +1,14 @@
 class Solution(object):
     def fib(self, n):
         
-        def fibo(n):
-            if n <= 1 :
-                return n
-            
-            return fibo(n-1) + fibo(n-2)
+        if n==0: return 0
+        if n==1: return 1
+        x = 0
+        y = 1
 
-        return fibo(n)
+        for i in range(2,n+1):
+            c = x + y
+            x = y
+            y = c
+        
+        return c
