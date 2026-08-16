@@ -1,8 +1,10 @@
-class Solution(object):
-    def reverseWords(self, s):
-        words = s.split()
-        words.reverse()
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        
+        result = []
+        arr = s.split()
+        arr.reverse()
+        result = " ".join(arr)
 
-        result = " ".join(words)
+        return result
 
-        return result 
